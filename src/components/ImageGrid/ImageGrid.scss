@@ -1,0 +1,29 @@
+@use '../../mixins' as *;
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-grid__h2 {
+  font-size: $text-4xl;
+  margin-block: 50px;
+
+  @media (max-width: $screen-xs-min) {
+    padding: 0 10px;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    font-size: $text-10xl;
+    width: 50%;
+  }
+}
+
+.image-grid__image {
+  width: 50%;
+  height: auto;
+  @media (min-width: $screen-md-min) {
+    width: calc(100% / 3);
+    height: auto;
+  }
+}

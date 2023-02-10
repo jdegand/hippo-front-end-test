@@ -1,0 +1,33 @@
+.scroller {
+  width: 22px;
+  height: 44px;
+  border: 2px solid #fff;
+  position: relative;
+  border-radius: 30px;
+}
+
+.scroller::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  animation: 2s scroll infinite;
+}
+
+@keyframes scroll {
+  0% {
+    top: 5px;
+  }
+
+  50% {
+    top: 15px;
+  }
+
+  100% {
+    top: 30px;
+  }
+}

@@ -1,0 +1,183 @@
+/* =============================================
+    Hippo General
+============================================= */
+
+// Pages
+$page-max-width: 1024px;
+$telemedicine-sales-page-max-width: 1128px;
+
+// Screen Sizes
+$screen-xs-min: 576px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+$screen-xl-min: 1440px;
+
+// Fonts
+$font-family-primary: 'Celias', 'Helvetica Neue', helvetica, arial, sans-serif;
+$font-family-secondary: 'Lato', 'Helvetica Neue', helvetica, arial, sans-serif;
+$font-family-brand: 'Gotham Rounded', 'Lato', 'Helvetica Neue', helvetica, arial,
+  sans-serif;
+
+// Text
+
+$text-xs: 0.75rem; // 12px
+$text-sm: 0.875rem; // 14px
+$text-base: 1rem; // 16px
+$text-lg: 1.125rem; // 18px
+$text-xl: 1.25rem; // 20px;
+$text-2xl: 1.375rem; // 22px;
+$text-3xl: 1.5rem; // 24px;
+$text-4xl: 1.75rem; // 28px;
+$text-5xl: 2rem; // 32px
+$text-8xl: 2.5rem; // 40px
+$text-10xl: 3rem; // 48px;
+
+$line-height-base: 1.42857143;
+$line-height-2: 1.6;
+
+// Homepage Colors
+$hippo-homepage-bg-blue: #4886af;
+$logo-text-color: #4c4d4d;
+
+// Product Branding Colors
+$aapa-pc-rap-blue: #3296d2;
+$pc-rap-blue: #3295d2;
+$peds-rap-purple: #9459a4;
+$peds-purple: #945aa4;
+$uc-rap-green: #18af5b;
+$uc-bootcamp-green: #18af5b;
+$aemb-orange: #f05d40;
+$em-red: #eb4d38;
+$peds-em-red: #d10909;
+$tele-blue-light: #3b38dd;
+$tele-blue-dark: #24299d;
+$tele-gradient: linear-gradient(168.96deg, #4d49fb 9.79%, #24299d 90.2%);
+$uc-llsa-green: #5ab470;
+
+$sales-page-blue: #0e8bff;
+
+// Colors
+$black: #1e1e1e;
+
+$blue-lighten-4: #ecf1f9;
+$blue-lighten-3: #bfd6f0;
+$blue: #2d89f3;
+$blue-darken-1: #0166dc;
+$blue-darken-2: #292f48;
+$blue-darken-3: #1a173b;
+
+$gray-lighten-6: #fafbfc;
+$gray-lighten-5: #f4f6f9;
+$gray-lighten-4: #e5e8ea;
+$gray-lighten-3: #fbfbfb;
+$gray-lighten-2: #f5f7f9;
+$gray-lighten-1: #efefef;
+$gray: #d7d7d7;
+$gray-darken-1: #a7a9b2;
+$gray-darken-2: #868686;
+$gray-darken-3: #666;
+$gray-darken-4: #360d15;
+$gray-darken-5: #1f2538;
+
+$green: #5cbd7b;
+$green-darken-1: #499762;
+
+$orange: #ffa263;
+$orange-darken-1: #dd8c55;
+
+$purple: #7436aa;
+
+$red: #ea4865;
+$red-darken-1: #c23c54;
+
+$white: #fff;
+
+$bg: $gray-lighten-3;
+
+$box-shadow: 0 2px 9px rgba(114, 164, 183, 0.25);
+$box-shadow-hover: 0 2px 20px rgba(114, 164, 183, 0.3);
+$box-shadow-form-fields: 0 0 7px 0 rgba(0, 0, 0, 0.05);
+$box-shadow-light: 0 2px 4px rgba(217, 210, 210, 0.5);
+$box-shadow-sidebar: 0.1rem 0 0.4rem rgba($gray-darken-2, 0.2);
+
+// mixins
+
+@mixin container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $screen-xl-min;
+}
+
+@mixin box {
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  box-shadow: $box-shadow;
+  width: 100%;
+  padding: 1.5rem 1rem;
+}
+
+@mixin card {
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  box-shadow: $box-shadow;
+  width: 100%;
+  border-radius: $border-radius-md;
+  height: 254px;
+  padding: 0;
+
+  &:hover {
+    box-shadow: $box-shadow-hover;
+  }
+}
+
+@mixin cta-btn {
+  background: #0d73e7; /* $blue */
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-block: 40px;
+
+  &:hover {
+    background: $sales-page-blue;
+    color: #fff;
+  }
+}
+
+// Misc
+
+$sidebar-width: 18rem;
+
+$border: solid 1px $gray-lighten-1;
+$text-color: $black;
+$shadow-color: rgba($gray-darken-2, 0.2);
+
+@mixin focus {
+  outline: none; // Remove dotted outline on links for Firefox.
+  border: 1px solid $blue;
+  border-radius: $border-radius-sm;
+  box-shadow: 0 0 4px 0 rgba(45, 137, 243, 0.25);
+
+  &::-moz-focus-inner {
+    border: 0; // Remove dotted outline on buttons for Firefox.
+  }
+}
+
+// Misc
+
+$border-radius-xxs: 2px;
+$border-radius-xs: 3px;
+$border-radius-sm: 4px;
+$border-radius-base: 6px;
+$border-radius-md: 8px;
+$border-radius-lg: 10px;
+
+$border: solid 1px $gray-lighten-1;
+
+$text-color: $black;
+$shadow-color: rgba($gray-darken-2, 0.2);
+$dimmer-z-index: 10;

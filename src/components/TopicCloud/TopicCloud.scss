@@ -1,0 +1,62 @@
+@use '../../mixins' as *;
+
+.topic-cloud {
+  background-image: url('../../images/Group\ 1071.png');
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding: 100px 0 0 0;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.topic-cloud__selected {
+  border-bottom: 2px solid $blue-darken-1;
+  color: #000;
+  font-weight: bold;
+}
+
+.topic-cloud__not-selected {
+  color: #737373;
+}
+
+.topic__selected {
+  color: #000;
+  font-weight: bold;
+}
+
+.topic__unselected {
+  color: #707070;
+  font-weight: 300;
+}
+
+.topic-cloud__topics-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  line-height: $line-height-2;
+  margin-block: 50px 25px;
+  font-size: $text-2xl;
+}
+
+.topic-cloud__topic-button {
+  font-size: $text-2xl;
+  line-height: $line-height-2;
+  cursor: default;
+}
+
+.topic-cloud__ul {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.75;
+  background-image: url('../../images/Group\ 1072.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom right;
+  padding-bottom: 125px;
+}
+
+.topic {
+  margin-inline: 10px;
+}

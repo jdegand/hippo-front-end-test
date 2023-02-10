@@ -1,0 +1,257 @@
+@use '../../mixins' as *;
+
+.content-section {
+  @media (min-width: $screen-sm-min) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/*
+@media (prefers-reduced-motion: reduce) {
+  .content-section {
+    opacity: 1;
+  }
+
+  .content-section__animation {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    animation-name: unset;
+  }
+}
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+  .content-section {
+    opacity: 0;
+  }
+
+  .content-section__animation {
+    animation-fill-mode: both;
+    animation-duration: 1000ms;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    opacity: 1;
+    animation-name: reveal;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    transform: translate3d(0px, 50%, 0px);
+  }
+
+  100% {
+    transform: 0;
+  }
+}
+
+.content-section__paragraph-section {
+  padding: 50px 10px;
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-lg-min) {
+    padding: 50px;
+  }
+}
+
+.grid-column-1 {
+  grid-column: 1;
+  grid-row: 1 / -1;
+}
+
+.grid-column-2 {
+  grid-column: 2;
+  grid-row: 1 / -1;
+}
+
+.align-flex-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.align-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-section__h1 {
+  font-size: $text-8xl;
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-lg-min) {
+    font-size: $text-5xl;
+  }
+
+  @media (min-width: $screen-xl-min) {
+    font-size: $text-10xl;
+  }
+}
+
+.padding-inline-10 {
+  padding: 0 10px;
+}
+
+.content-section__h2 {
+  font-size: $text-3xl;
+  position: relative;
+  margin-block-end: 20px;
+}
+
+.content-section__background-1 {
+  position: relative;
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+}
+
+.content-section__background-1::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -25%;
+  right: -75%;
+  background-image: url('../../images/Group\ 1070.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.content-section__background-2 {
+  position: relative;
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+}
+
+.content-section__background-2::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url('../../images/Group\ 1000.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.content-section__background-4 {
+  position: relative;
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+}
+
+.content-section__background-4::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url('../../images/Group\ 997.webp');
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  @media (max-width: $screen-lg-min) {
+    right: -50%;
+  }
+}
+
+.content-section__h2-italic {
+  font-style: italic;
+}
+
+.content-section__h2::before {
+  content: '';
+  width: 100px;
+  height: 3px;
+  position: absolute;
+  bottom: -13px;
+  background: #0d73e7;
+}
+
+.content-section__p {
+  margin-block: 50px;
+  line-height: 1.5;
+
+  @media (min-width: $screen-xl-min) {
+    max-width: 80%;
+  }
+}
+
+.content-section__p3 {
+  font-weight: bold;
+}
+
+.content-section__a {
+  @include cta-btn;
+}
+
+.margin-block-20 {
+  margin-block: 20px;
+}
+
+.margin-block-50 {
+  margin-block: 50px;
+
+  @media (min-width: $screen-sm-min) {
+    margin-block: 20px;
+  }
+}
+
+.content-section__h1__margin {
+  margin-block: 40px;
+}
+
+.content-section__image-section {
+  overflow: hidden;
+}
+
+.content__section__image-section__img {
+  width: 100%;
+  height: auto;
+  box-shadow: 16px 24px 24px hsl(0deg 0% 0% / 0.1);
+
+  @media (min-width: $screen-xs-min) and (max-width: $screen-lg-min) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    width: 600px;
+    height: 600px;
+    border-radius: $border-radius-md;
+  }
+}
+
+.content__section__image-section__img {
+  width: 100%;
+  height: auto;
+  box-shadow: 16px 24px 24px hsl(0deg 0% 0% / 0.1);
+
+  @media (min-width: $screen-xs-min) and (max-width: $screen-lg-min) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    width: 600px;
+    height: 600px;
+    border-radius: $border-radius-md;
+  }
+}
+
+.content__section__image-section__third-img {
+  border: none;
+  box-shadow: none;
+
+  @media (max-width: $screen-xs-min) {
+    min-width: 108%;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    height: 784px;
+  }
+}

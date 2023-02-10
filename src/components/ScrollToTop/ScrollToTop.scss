@@ -1,0 +1,16 @@
+@use '../../mixins' as *;
+
+svg {
+  max-width: 44px;
+  min-width: 44px;
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (max-width: $screen-md-min) {
+    right: 40px;
+  }
+}

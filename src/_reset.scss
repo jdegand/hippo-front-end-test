@@ -1,0 +1,78 @@
+@use './mixins' as *;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: $font-family-primary;
+  box-sizing: border-box;
+  background: $bg;
+  color: $text-color;
+  font-size: $text-sm;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  @include container;
+}
+
+a {
+  text-decoration: underline;
+  color: $blue;
+  font-size: $text-sm;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+
+a:hover {
+  color: $blue-darken-1;
+}
+
+ul,
+ol,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+span,
+p {
+  font-family: $font-family-secondary;
+}
+
+img {
+  max-width: 100%;
+  @media (max-width: $screen-xs-min) {
+    max-width: unset;
+  }
+}

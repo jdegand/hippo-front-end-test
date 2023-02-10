@@ -1,0 +1,64 @@
+@use './mixins' as *;
+
+body {
+  @media (min-width: $screen-sm-min) {
+    font-size: $text-base;
+  }
+}
+
+.page-content {
+  margin: auto;
+  max-width: $screen-xl-min;
+}
+
+.header-container {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  width: 100%;
+  min-height: 20rem;
+  position: relative;
+  background: url('./images/home.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-width: $screen-md-min) {
+    min-height: 50rem;
+  }
+}
+
+.header-container__headline {
+  text-align: center;
+  color: #fff;
+  width: 95%;
+  line-height: 1.42857143;
+  font-size: $text-xl;
+  line-height: $line-height-base;
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-lg-min) {
+    font-size: $text-5xl;
+    width: 75%;
+  }
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+    width: 68%;
+  }
+
+  @media (min-width: $screen-xl-min) {
+    font-size: $text-10xl;
+    max-width: 32ch;
+  }
+}
+
+.header-container__scroller {
+  position: absolute;
+  bottom: 100px;
+
+  @media (max-width: $screen-md-min) {
+    bottom: 10px;
+  }
+}
+
+.header-container__a {
+  @include cta-btn;
+}
